@@ -1,4 +1,4 @@
-# Projeto-board-decolatech
+# ٩(●̮̮̃•̃)۶ Projeto-board-decolatech ٩(●̮̮̃•̃)۶
 ## Board para gerenciamento de tarefas ☕
 O seguinte projeto consiste em construir um board customizável de tarefas em Java, utilizando Maven, Liquibase e MySQL, seguindo boas práticas de programação.
 
@@ -19,5 +19,7 @@ O seguinte projeto consiste em construir um board customizável de tarefas em Ja
   - O menu deve permitir mover o card para próxima coluna, cancelar um card, criar um card, bloquea-lo, desbloquea-lo e fechar board.
     
  ## Imagens do projeto
-  <img src="https://github.com/ipibraz/desafio.board.decolatech/blob/master/Captura%20de%20tela%202025-02-27%20204508.png">
-  <img src="https://github.com/pibraz/desafio.board.decolatech/blob/master/Captura%20de%20tela%202025-02-27%20204508.png">
+  <img src="https://github.com/pibraz/Projeto-board-decolatech/blob/master/Captura de Tela (24).png">
+  <img src="https://github.com/pibraz/Projeto-board-decolatech/blob/master/Captura de Tela (25).png">
+  <img src="https://github.com/pibraz/Projeto-board-decolatech/blob/master/Captura de Tela (26).png">
+  <img src="https://github.com/pibraz/Projeto-board-decolatech/blob/master/Captura de Tela (27).png">
