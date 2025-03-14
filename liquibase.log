@@ -1,0 +1,72 @@
+mar. 14, 2025 1:23:08 AM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202503111603.sql
+mar. 14, 2025 1:23:08 AM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202503111653.sql
+mar. 14, 2025 1:23:08 AM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202503111706.sql
+mar. 14, 2025 1:23:08 AM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202503111714.sql
+mar. 14, 2025 1:23:08 AM liquibase.changelog
+INFO: Reading resource: db/changelog/migrations/db.changelog-202503140118.sql
+mar. 14, 2025 1:23:08 AM liquibase.command
+INFO: Logging exception.
+ERROR: Exception Details
+ERROR: Exception Primary Class:  ChangeLogParseException
+ERROR: Exception Primary Reason: 
+Unexpected formatting in formatted changelog 'db/changelog/migrations/db.changelog-202503140118.sql' at line 2.
+Formatted SQL changelogs require known formats, such as '--changeset <authorname>:<changesetId>' and others to be recognized and run.
+Learn all the options at https://docs.liquibase.com/concepts/changelogs/sql-format.html
+ERROR: Exception Primary Source: 4.25.1
+mar. 14, 2025 1:23:08 AM liquibase.command
+INFO: Command execution complete
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: Error parsing db/changelog/db.changelog-master.yml : 
+Unexpected formatting in formatted changelog 'db/changelog/migrations/db.changelog-202503140118.sql' at line 2.
+Formatted SQL changelogs require known formats, such as '--changeset <authorname>:<changesetId>' and others to be recognized and run.
+Learn all the options at https://docs.liquibase.com/concepts/changelogs/sql-format.html
+	at liquibase.command.CommandScope.execute(CommandScope.java:253)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1419)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.Liquibase.update(Liquibase.java:194)
+	at liquibase.Liquibase.update(Liquibase.java:164)
+	at br.com.bio.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:39)
+	at br.com.bio.Main.main(Main.java:14)
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing db/changelog/db.changelog-master.yml : 
+Unexpected formatting in formatted changelog 'db/changelog/migrations/db.changelog-202503140118.sql' at line 2.
+Formatted SQL changelogs require known formats, such as '--changeset <authorname>:<changesetId>' and others to be recognized and run.
+Learn all the options at https://docs.liquibase.com/concepts/changelogs/sql-format.html
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:94)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:171)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87)
+	at liquibase.command.CommandScope.execute(CommandScope.java:217)
+	... 12 more
+Caused by: liquibase.exception.SetupException: 
+Unexpected formatting in formatted changelog 'db/changelog/migrations/db.changelog-202503140118.sql' at line 2.
+Formatted SQL changelogs require known formats, such as '--changeset <authorname>:<changesetId>' and others to be recognized and run.
+Learn all the options at https://docs.liquibase.com/concepts/changelogs/sql-format.html
+	at liquibase.changelog.DatabaseChangeLog.includeAll(DatabaseChangeLog.java:756)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:508)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:390)
+	at liquibase.parser.core.yaml.YamlChangeLogParser.parse(YamlChangeLogParser.java:88)
+	... 18 more
+Caused by: liquibase.exception.ChangeLogParseException: 
+Unexpected formatting in formatted changelog 'db/changelog/migrations/db.changelog-202503140118.sql' at line 2.
+Formatted SQL changelogs require known formats, such as '--changeset <authorname>:<changesetId>' and others to be recognized and run.
+Learn all the options at https://docs.liquibase.com/concepts/changelogs/sql-format.html
+	at liquibase.parser.AbstractFormattedChangeLogParser.parse(AbstractFormattedChangeLogParser.java:456)
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:951)
+	at liquibase.changelog.DatabaseChangeLog.lambda$includeAll$2(DatabaseChangeLog.java:751)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.changelog.DatabaseChangeLog.includeAll(DatabaseChangeLog.java:748)
+	... 21 more
